@@ -11,7 +11,7 @@
   --white: #fff;
   --gray: #575756;
   --gray-light: #f5f5f5;
-  --gray-mid: #e8e8e8;
+  --gray-mid: #e8e8e8; 
 }
 body, button, input, select, textarea {
   font-family: "Montserrat", sans-serif;
