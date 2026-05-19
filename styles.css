@@ -629,8 +629,8 @@ body {
 }
 .section-title {
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 42px;
+  font-weight: 600;
+  font-size: 22px;
   line-height: 1.1;
   color: var(--black);
   letter-spacing: -1px;
@@ -1468,6 +1468,97 @@ body {
   font-weight: 600;
   background: var(--gray-light);
   color: var(--gray);
+}
+
+/* PROJECT CARDS WITH HOVER EFFECT */
+.project-card-hover {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--gray-mid);
+  cursor: pointer;
+  height: 320px;
+}
+
+.project-card-hover .card-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.project-card-hover:hover .card-image {
+  transform: scale(1.05);
+}
+
+.project-card-hover .card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card-hover:hover .card-overlay {
+  opacity: 1;
+}
+
+.project-card-hover .card-content {
+  color: #fff;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.project-card-hover:hover .card-content {
+  transform: translateY(0);
+}
+
+.project-card-hover .card-category {
+  font-size: 11px;
+  color: var(--red);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.project-card-hover .card-title {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.project-card-hover .card-description {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.project-card-hover .card-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-card-hover .card-badges .badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.project-card-hover .card-badges .badge-red {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
   border: 1px solid var(--gray-mid);
 }
 .badge-red {
@@ -2839,13 +2930,13 @@ body {
 .contact-form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
 .field-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .field-group.full {
@@ -2853,40 +2944,61 @@ body {
 }
 
 .field-group label {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
   color: #1E1E1E;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.field-group label::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--red);
+  margin-top: 4px;
+  border-radius: 1px;
 }
 
 .lux-input,
 .lux-select,
 .lux-textarea {
   width: 100%;
-  border: 1px solid #e6eaf0;
+  border: 2px solid #e8ecf1;
   background: #ffffff;
-  border-radius: 14px;
-  padding: 14px 18px;
-  font-size: 14px;
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 15px;
   color: #1E1E1E;
-  transition: all .35s ease;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .lux-input:hover,
 .lux-select:hover,
 .lux-textarea:hover {
-  border-color: rgba(229, 40, 34, 0.25);
+  border-color: #d1d5db;
+  background: #fafbfc;
 }
 
 .lux-input:focus,
 .lux-select:focus,
 .lux-textarea:focus {
   border-color: var(--red);
+  background: #ffffff;
   box-shadow:
-    0 0 0 5px rgba(229, 40, 34, 0.08),
-    0 10px 30px rgba(229, 40, 34, 0.08);
+    0 0 0 4px rgba(229, 40, 34, 0.1),
+    0 4px 12px rgba(229, 40, 34, 0.15);
   transform: translateY(-1px);
+}
+
+.lux-input::placeholder,
+.lux-textarea::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
 }
 
 .lux-textarea {
@@ -2897,32 +3009,70 @@ body {
 .submit-btn {
   margin-top: 8px;
   width: 100%;
-  height: 54px;
+  height: 56px;
   border: none;
-  border-radius: 16px;
+  border-radius: 14px;
   background:
     linear-gradient(135deg,
-      #e52822,
-      #b81e18);
+      #e52822 0%,
+      #c4201a 100%);
   color: white;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
 
-  transition: .35s ease;
+  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow:
-    0 15px 30px rgba(0,146,158,0.2);
+    0 4px 14px rgba(229, 40, 34, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
 }
 
 .submit-btn:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow:
-    0 28px 50px rgba(229, 40, 34, 0.28);
+    0 8px 24px rgba(229, 40, 34, 0.4),
+    0 2px 6px rgba(0, 0, 0, 0.15);
+  background:
+    linear-gradient(135deg,
+      #f53832 0%,
+      #d42822 100%);
+}
+
+.submit-btn:hover::before {
+  left: 100%;
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 12px rgba(229, 40, 34, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* RIGHT SIDE */
