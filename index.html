@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      IAS Register Africa - Excellence Industrielle et Digitale en Afrique
+      IRG Register Africa - Excellence Industrielle et Digitale en Afrique
     </title>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -21,10 +21,8 @@
       <!-- NAVBAR -->
       <nav class="nav">
         <div class="nav-logo">
-          <div class="nav-logo-mark">IAS</div>
+          <img src="Images/IRG Logo-01.png" alt="IRG Logo" style="height: 40px;" />
           <div>
-            <div class="nav-name">IAS Register Africa</div>
-            <div class="nav-sub">Filiale Sénégalaise</div>
           </div>
         </div>
         <div class="nav-links">
@@ -46,13 +44,13 @@
         <!-- HERO SLIDER -->
         <section class="hero-slider">
           <!-- FLECHES -->
-          <div class="arrow arrow-left" onclick="prevSlide()">&#10094;</div>
-          <div class="arrow arrow-right" onclick="nextSlide()">&#10095;</div>
+          <div class="arrow arrow-left" onclick="changeSlide(-1)">&#10094;</div>
+          <div class="arrow arrow-right" onclick="changeSlide(1)">&#10095;</div>
 
           <div class="slider-container">
             <!-- Slide 1 -->
             <div class="slide active">
-              <div class="slide-bg" style="background-image: url('Images/96081.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/portrait-engineers-work-hours-job-site.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box">
@@ -71,7 +69,7 @@
 
             <!-- Slide 2 -->
             <div class="slide">
-              <div class="slide-bg" style="background-image: url('Images/woman-debugging-optimizing-code-using-ai_482257-112287.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/server-room-colleagues-use-artificial-intelligence-perform-computing-tasks.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Transformation Digitale & IoT</h1></div>
@@ -85,7 +83,7 @@
 
             <!-- Slide 3 -->
             <div class="slide">
-              <div class="slide-bg" style="background-image: url('Images/economical-research.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/standard-quality-control-concept-m.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Inspection & Audit Certifié</h1></div>
@@ -155,7 +153,7 @@
                   style="
                     background:
                       linear-gradient(135deg, #1a1a2e, #16213e),
-                      url(&quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&amp;q=80&quot;)
+                      url(&quot;Images/portrait-engineers-work-hours-job-site.jpg&quot;)
                         center/cover;
                     background-blend-mode: multiply;
                   "
@@ -182,7 +180,7 @@
                   style="
                     background:
                       linear-gradient(135deg, #0d1117, #161b22),
-                      url(&quot;https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=400&amp;q=80&quot;)
+                      url(&quot;Images/tech-support-oversees-ai-neural-network.jpg&quot;)
                         center/cover;
                     background-blend-mode: multiply;
                   "
@@ -208,7 +206,7 @@
                   style="
                     background:
                       linear-gradient(135deg, #2d1b1b, #4a1515),
-                      url(&quot;https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?w=400&amp;q=80&quot;)
+                      url(&quot;Images/male-working-with-welding-torch.jpg&quot;)
                         center/cover;
                     background-blend-mode: multiply;
                   "
@@ -242,25 +240,26 @@
 
         <!-- ABOUT STRIP -->
         <div class="about-strip">
-          <div class="about-content">
+          <div class="about-content" id="about-histoire">
 
             <div class="section-title" style="color: #fff; font-size: 38px">
               Construire l'Afrique industrielle de demain
             </div>
             <p class="about-text">
-              Filiale du groupe IAS Register, nous accompagnons les entreprises
+              Filiale du groupe IRG Register, nous accompagnons les entreprises
               sénégalaises et panafricaines dans leur démarche de certification,
               de conformité et d'excellence opérationnelle depuis plus de 15
               ans.
             </p>
-            <button class="btn-primary">
-              <i class="ti ti-arrow-right"></i> Découvrir notre histoire
+            <button class="btn-primary" id="bouton-cta">
+              <i class="ti ti-arrow-right"></i> 
+              Découvrir notre histoire
             </button>
           </div>
           <div
             class="about-img-panel"
             style="
-              background: url(&quot;Images/Surmesure1.jpg&quot;) center/cover
+              background: url(&quot;Images/view-heavy-machinery-used-construction-industry.jpg&quot;) center/cover
                 no-repeat;
             "
           >
@@ -272,7 +271,7 @@
         <section class="section" style="background: var(--gray-light)">
           <div style="text-align: center; margin-bottom: 60px">
 
-            <div class="section-title">Nos valeurs fondamentales</div>
+        <div class="section-title" style="margin-top: 40px;">Nos valeurs fondamentales</div>
           </div>
           <div class="values-grid">
             <div class="value-card">
@@ -316,7 +315,7 @@
             <div>
 
               <div class="section-title">
-                Nos réalisations<br />emblématiques
+                Nos réalisations emblématiques
               </div>
             </div>
 
@@ -325,7 +324,7 @@
             <div class="project-card">
               <div
                 class="project-img"
-                style="background: linear-gradient(135deg, #1a0a00, #3d1500)"
+                style="background: url('Images/excavator-action.jpg') center/cover"
               ></div>
               <div class="project-overlay">
 
@@ -337,7 +336,7 @@
             <div class="project-card">
               <div
                 class="project-img"
-                style="background: linear-gradient(135deg, #001a0a, #003d15)"
+                style="background: url('Images/sunset-sky-powers-wind-solar-energy-generated-by-ai.jpg') center/cover"
               ></div>
               <div class="project-overlay">
 
@@ -349,7 +348,7 @@
             <div class="project-card">
               <div
                 class="project-img"
-                style="background: linear-gradient(135deg, #0a001a, #15003d)"
+                style="background: url('Images/tech-support-oversees-ai-neural-network.jpg') center/cover"
               ></div>
               <div class="project-overlay">
 
@@ -371,7 +370,7 @@
             <div class="testi-card">
               <div class="testi-stars">★★★★★</div>
               <div class="testi-quote">
-                "IAS Register Africa a transformé notre approche qualité. Leur
+                "IRG Register Africa a transformé notre approche qualité. Leur
                 expertise ISO et leur accompagnement terrain nous ont permis
                 d'atteindre nos objectifs en un temps record."
               </div>
@@ -402,7 +401,7 @@
               <div class="testi-stars">★★★★★</div>
               <div class="testi-quote">
                 "Professionnalisme exemplaire, réactivité et maîtrise technique
-                incomparables. IAS Register Africa est notre référence pour tous
+                incomparables. IRG Register Africa est notre référence pour tous
                 nos projets de certification et d'audit."
               </div>
               <div class="testi-author">
@@ -417,7 +416,7 @@
         </section>
 
         <!-- PARTENAIRES -->
-        <section class="partners-section">
+        <section class="partners-section" style="margin-top: 20px; margin-bottom: 20px;">
 
           <div class="partners-row">
             <div class="partner-logo">UKAS</div>
@@ -435,10 +434,10 @@
         <section class="cta-section-enhanced">
           <div class="cta-content">
 
-            <div class="section-title">Prêt à élever vos standards ?</div>
+          <div class="section-title">Prêt à élever vos standards ?</div>
             <p class="cta-description">
               Contactez nos experts pour un audit gratuit et découvrez comment
-              IAS Register Africa peut transformer votre organisation.
+              IRG Register Africa peut transformer votre organisation.
             </p>
             <div class="cta-buttons">
               <button class="btn-primary">
@@ -481,11 +480,11 @@
           <div class="slider-container">
             <!-- Slide 1 -->
             <div class="slide active">
-              <div class="slide-bg" style="background-image: url('Images/manager-discussing-with-coworkers-night-meeting.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/business-person-using-laptop-multitasking-finish-daily-startup-tasks.jpg')"></div>
               <div class="hero-content">
 
-                <div class="red-box"><h1>À propos de<br />IAS Register Africa</h1></div>
-                <p>Filiale du groupe international IAS Register, nous sommes le partenaire de référence pour la certification et l'excellence industrielle en Afrique subsaharienne depuis 2009.</p>
+                <div class="red-box"><h1>À propos de<br />IRG Register Africa</h1></div>
+                <p>Filiale du groupe international IRG Register, nous sommes le partenaire de référence pour la certification et l'excellence industrielle en Afrique subsaharienne depuis 2009.</p>
                 <div class="hero-buttons">
                   <a href="#" class="btn-slider btn-red">Notre Histoire</a>
                   <a href="#" class="btn-slider btn-outline">Notre Équipe</a>
@@ -494,7 +493,7 @@
             </div>
             <!-- Slide 2 -->
             <div class="slide">
-              <div class="slide-bg" style="background-image: url('Images/Surmesure1.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/view-male-engineer-work-engineers-day-celebration.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Construire l'Afrique<br />industrielle de demain</h1></div>
@@ -506,6 +505,12 @@
               </div>
             </div>
           </div>
+
+          <!-- DOTS -->
+          <div class="slider-dots">
+            <div class="dot active" onclick="changeAboutSlide(0)"></div>
+            <div class="dot" onclick="changeAboutSlide(1)"></div>
+          </div>
         </section>
         <section class="section about-section">
           <div class="about-grid">
@@ -515,12 +520,11 @@
 
 
               <h2 class="section-title">
-                L’excellence au service<br />
-                des entreprises africaines
+                L’excellence au service des entreprises africaines
               </h2>
 
               <p class="about-text">
-                Depuis Dakar, IAS Register Africa accompagne les organisations dans
+                Depuis Dakar, IRG Register Africa accompagne les organisations dans
                 leur performance, leur conformité et leur transformation à travers
                 l’Afrique de l’Ouest.
               </p>
@@ -745,7 +749,7 @@
             <div class="carousel">
               <!-- Ousmane -->
               <div class="card active">
-                <img src="Images/team-ousmane.png" alt="Ousmane Konaté" />
+                <img src="Images/african-american-worker-standing-uniform-wearing-safety-hat-factory.jpg" alt="Ousmane Konaté" />
                 <div class="overlay"></div>
                 <div class="person-info">
                   <h3>Ousmane Konaté</h3>
@@ -755,7 +759,7 @@
 
               <!-- Fatou -->
               <div class="card">
-                <img src="Images/team-fatou.png" alt="Fatou Ndiaye" />
+                <img src="Images/serious-female-warehouse-employee-hardhat-standing-near-forklift-talking-mobile-phone-shelves-with-goods-background-copy-space-labor-communication-concept.jpg" alt="Fatou Ndiaye" />
                 <div class="overlay"></div>
                 <div class="person-info">
                   <h3>Fatou Ndiaye</h3>
@@ -765,7 +769,7 @@
 
               <!-- Moussa -->
               <div class="card">
-                <img src="Images/team-moussa.png" alt="Moussa Baldé" />
+                <img src="Images/male-working-with-welding-torch.jpg" alt="Moussa Baldé" />
                 <div class="overlay"></div>
                 <div class="person-info">
                   <h3>Moussa Baldé</h3>
@@ -775,7 +779,7 @@
 
               <!-- Aminata -->
               <div class="card">
-                <img src="Images/team-aminata.png" alt="Aminata Mboup" />
+                <img src="Images/african-american-technician-check-maintenance-solar-panels-black-woman-engineer-solar-station.jpg" alt="Aminata Mboup" />
                 <div class="overlay"></div>
                 <div class="person-info">
                   <h3>Aminata Mboup</h3>
@@ -794,7 +798,7 @@
             <p class="description" id="team-description">
               Fondateur et Directeur Général avec plus de 15 ans d'expérience
               dans l'inspection industrielle. Ancien cadre chez Bureau Veritas,
-              il pilote la vision stratégique d'IAS Register en Afrique.
+              il pilote la vision stratégique d'IRG Register en Afrique.
             </p>
 
             <button class="btn">Découvrir le profil</button>
@@ -817,7 +821,7 @@
           <div class="slider-container">
             <!-- Slide 1 -->
             <div class="slide active">
-              <div class="slide-bg" style="background-image: url('Images/96081.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/tech-support-oversees-ai-neural-network.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Audit &<br />Certification ISO</h1></div>
@@ -830,7 +834,7 @@
             </div>
             <!-- Slide 2 -->
             <div class="slide">
-              <div class="slide-bg" style="background-image: url('Images/Surmesure1.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/portrait-native-american-engineer-technician-wearing-safty-uniform-hand-contril-automation-robot-arm-welding-machine-with-laptop-industrial-40-factory-background-concept.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Solutions Innovantes<br />Pour l'Industrie</h1></div>
@@ -842,100 +846,41 @@
               </div>
             </div>
           </div>
+
+          <!-- DOTS -->
+          <div class="slider-dots">
+            <div class="dot active" onclick="changeServicesSlide(0)"></div>
+            <div class="dot" onclick="changeServicesSlide(1)"></div>
+          </div>
         </section>
         <section class="section">
           <!-- Service détaillé 1 -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div>
-
-              <div class="section-title" style="font-size: 36px">
+          <div class="service-detail-item">
+            <div class="service-content">
+              <div class="section-title" style="font-size: 36px;">
                 Audit & Certification ISO
               </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
+              <p style="color: var(--gray); font-size: 15px; line-height: 1.8; margin: 16px 0 28px;">
                 Nous accompagnons vos équipes dans l'obtention et le maintien
                 des certifications ISO reconnues internationalement. Notre
                 approche terrain garantit une mise en conformité durable et
                 opérationnelle.
               </p>
-              <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
+              <div class="service-features">
+                <div class="service-feature">
+                  <i class="ti ti-check" style="color: var(--red); font-size: 18px"></i>
                   ISO 9001 — Management de la qualité
                 </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
+                <div class="service-feature">
+                  <i class="ti ti-check" style="color: var(--red); font-size: 18px"></i>
                   ISO 14001 — Management environnemental
                 </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
+                <div class="service-feature">
+                  <i class="ti ti-check" style="color: var(--red); font-size: 18px"></i>
                   ISO 45001 — Santé et sécurité au travail
                 </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
+                <div class="service-feature">
+                  <i class="ti ti-check" style="color: var(--red); font-size: 18px"></i>
                   ISO 50001 — Gestion de l'énergie
                 </div>
               </div>
@@ -943,144 +888,29 @@
                 Demander un audit <i class="ti ti-arrow-right"></i>
               </button>
             </div>
-            <div
-              style="
-                background: linear-gradient(135deg, #0a0a0a, #1a0000);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                overflow: hidden;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  background: url(&quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80&quot;)
-                    center/cover;
-                  opacity: 0.25;
-                  mix-blend-mode: luminosity;
-                "
-              ></div>
-              <div
-                style="
-                  text-align: center;
-                  color: rgba(255, 255, 255, 0.3);
-                  position: relative;
-                  z-index: 1;
-                "
-              >
-                <i
-                  class="ti ti-certificate"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Certifications ISO</div>
-              </div>
+            <div class="service-image">
+              <img src="Images/standard-quality-control-concept-m.jpg" alt="Audit ISO" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
             </div>
           </div>
           <!-- Service 2 -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div
-              style="
-                background: linear-gradient(135deg, #0d1117, #161b22);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                order: -1;
-              "
-            >
-              <div style="text-align: center; color: rgba(255, 255, 255, 0.3)">
-                <i
-                  class="ti ti-cpu"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Transformation digitale</div>
-              </div>
+          <div class="service-detail-item service-detail-reverse">
+            <div class="service-image">
+              <img src="Images/server-room-colleagues-use-artificial-intelligence-perform-computing-tasks.jpg" alt="Transformation Digitale" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
             </div>
-            <div>
-
-              <div class="section-title" style="font-size: 36px">
+            <div class="service-content">
+              <div class="section-title" style="font-size: 36px;">
                 Transformation Digitale Industrielle
               </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
+              <p style="color: var(--gray); font-size: 15px; line-height: 1.8; margin: 16px 0 28px;">
                 Nous déployons des solutions digitales adaptées aux réalités
                 industrielles africaines : ERP, GMAO, IoT industriel, tableaux
                 de bord intelligents et formations aux outils digitaux.
               </p>
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: 1fr 1fr;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  ERP & GMAO
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  IoT Industriel
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Data Analytics
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Cybersécurité
-                </div>
+              <div class="service-tags">
+                <div class="service-tag">ERP & GMAO</div>
+                <div class="service-tag">IoT Industriel</div>
+                <div class="service-tag">Data Analytics</div>
+                <div class="service-tag">Cybersécurité</div>
               </div>
               <button class="btn-primary">
                 Explorer la solution <i class="ti ti-arrow-right"></i>
@@ -1089,93 +919,29 @@
           </div>
 
           <!-- Service 3: Facility Management -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div>
-              <div class="section-title" style="font-size: 36px">
+          <div class="service-detail-item">
+            <div class="service-content">
+              <div class="section-title" style="font-size: 36px;">
                 Facility Management
               </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
+              <p style="color: var(--gray); font-size: 15px; line-height: 1.8; margin: 16px 0 28px;">
                 Gestion complète de vos infrastructures et services : maintenance, nettoyage, sécurité, gestion des espaces et optimisation des coûts opérationnels.
               </p>
-              <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
+              <div class="service-features">
+                <div class="service-feature">
+                  <i class="ti ti-check" style="color: var(--red); font-size: 18px"></i>
                   Maintenance préventive et curative
                 </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
+                <div class="service-feature">
+                  <i class="ti ti-check" style="color: var(--red); font-size: 18px"></i>
                   Gestion des espaces de travail
                 </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
+                <div class="service-feature">
+                  <i class="ti ti-check" style="color: var(--red); font-size: 18px"></i>
                   Services de nettoyage et propreté
                 </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
+                <div class="service-feature">
+                  <i class="ti ti-check" style="color: var(--red); font-size: 18px"></i>
                   Sécurité et contrôle d'accès
                 </div>
               </div>
@@ -1183,868 +949,31 @@
                 En savoir plus <i class="ti ti-arrow-right"></i>
               </button>
             </div>
-            <div
-              style="
-                background: linear-gradient(135deg, #0a0a0a, #1a0000);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                overflow: hidden;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80')
-                    center/cover;
-                  opacity: 0.25;
-                  mix-blend-mode: luminosity;
-                "
-              ></div>
-              <div
-                style="
-                  text-align: center;
-                  color: rgba(255, 255, 255, 0.3);
-                  position: relative;
-                  z-index: 1;
-                "
-              >
-                <i
-                  class="ti ti-building"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Facility Management</div>
-              </div>
+            <div class="service-image">
+              <img src="Images/serious-female-warehouse-worker-hardhat-driving-fork-lift-looking-front.jpg" alt="Facility Management" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
             </div>
           </div>
 
           <!-- Service 4: Formation Professionnelle -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div
-              style="
-                background: linear-gradient(135deg, #0d1117, #161b22);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                order: -1;
-              "
-            >
-              <div style="text-align: center; color: rgba(255, 255, 255, 0.3)">
-                <i
-                  class="ti ti-graduation-cap"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Formation Professionnelle</div>
-              </div>
+          <div class="service-detail-item service-detail-reverse">
+            <div class="service-image">
+              <img src="Images/african-american-technician-check-maintenance-solar-panels-black-woman-engineer-solar-station.jpg" alt="Formation Professionnelle" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
             </div>
-            <div>
-              <div class="section-title" style="font-size: 36px">
+            <div class="service-content">
+              <div class="section-title" style="font-size: 36px;">
                 Formation Professionnelle
               </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
+              <p style="color: var(--gray); font-size: 15px; line-height: 1.8; margin: 16px 0 28px;">
                 Catalogue complet de formations professionnelles adaptées aux besoins des entreprises africaines : management, qualité, sécurité, digital et techniques.
               </p>
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: 1fr 1fr;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Management & Leadership
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Qualité & ISO
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Santé & Sécurité
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Compétences Digitales
-                </div>
+              <div class="service-tags">
+                <div class="service-tag">Management & Leadership</div>
+                <div class="service-tag">Qualité & ISO</div>
+                <div class="service-tag">Santé & Sécurité</div>
+                <div class="service-tag">Compétences Digitales</div>
               </div>
               <button class="btn-primary">
                 Voir le catalogue <i class="ti ti-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 5: Blog & Actualités -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div>
-              <div class="section-title" style="font-size: 36px">
-                Blog & Actualités
-              </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
-                Restez informé de nos actualités, articles d'expertise et nouvelles de nos filiales à travers l'Afrique. Contenu global et localisé par pays.
-              </p>
-              <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Articles d'expertise technique
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Actualités par filiale
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Études de cas et retours d'expérience
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Veille réglementaire africaine
-                </div>
-              </div>
-              <button class="btn-primary">
-                Lire le blog <i class="ti ti-arrow-right"></i>
-              </button>
-            </div>
-            <div
-              style="
-                background: linear-gradient(135deg, #0a0a0a, #1a0000);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                overflow: hidden;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  background: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80')
-                    center/cover;
-                  opacity: 0.25;
-                  mix-blend-mode: luminosity;
-                "
-              ></div>
-              <div
-                style="
-                  text-align: center;
-                  color: rgba(255, 255, 255, 0.3);
-                  position: relative;
-                  z-index: 1;
-                "
-              >
-                <i
-                  class="ti ti-news"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Blog & Actualités</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 6: Appel d'offres & Recrutement -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div
-              style="
-                background: linear-gradient(135deg, #0d1117, #161b22);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                order: -1;
-              "
-            >
-              <div style="text-align: center; color: rgba(255, 255, 255, 0.3)">
-                <i
-                  class="ti ti-briefcase"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Appel d'offres & Recrutement</div>
-              </div>
-            </div>
-            <div>
-              <div class="section-title" style="font-size: 36px">
-                Appel d'offres & Recrutement
-              </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
-                Plateforme de gestion des appels d'offres et du recrutement pour nos filiales et partenaires. Opportunités de carrière et projets collaboratifs.
-              </p>
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: 1fr 1fr;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Offres d'emploi
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Appels d'offres
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Stages & Alternance
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Partenariats
-                </div>
-              </div>
-              <button class="btn-primary">
-                Voir les opportunités <i class="ti ti-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 7: Réalisations & Projets -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div>
-              <div class="section-title" style="font-size: 36px">
-                Réalisations & Projets
-              </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
-                Découvrez nos références et projets clients à travers l'Afrique. Études de cas détaillées et témoignages de nos partenaires.
-              </p>
-              <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Projets de certification
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Transformations digitales
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Formations sur mesure
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Facility Management
-                </div>
-              </div>
-              <button class="btn-primary">
-                Voir nos réalisations <i class="ti ti-arrow-right"></i>
-              </button>
-            </div>
-            <div
-              style="
-                background: linear-gradient(135deg, #0a0a0a, #1a0000);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                overflow: hidden;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80')
-                    center/cover;
-                  opacity: 0.25;
-                  mix-blend-mode: luminosity;
-                "
-              ></div>
-              <div
-                style="
-                  text-align: center;
-                  color: rgba(255, 255, 255, 0.3);
-                  position: relative;
-                  z-index: 1;
-                "
-              >
-                <i
-                  class="ti ti-rocket"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Réalisations</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 8: Équipe & Membres -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div
-              style="
-                background: linear-gradient(135deg, #0d1117, #161b22);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                order: -1;
-              "
-            >
-              <div style="text-align: center; color: rgba(255, 255, 255, 0.3)">
-                <i
-                  class="ti ti-users"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Notre Équipe</div>
-              </div>
-            </div>
-            <div>
-              <div class="section-title" style="font-size: 36px">
-                Notre Équipe
-              </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
-                Découvrez notre équipe d'experts et consultants à travers nos filiales africaines. Organigramme et profils de nos membres.
-              </p>
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: 1fr 1fr;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Consultants experts
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Formateurs certifiés
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Auditeurs ISO
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Équipes terrain
-                </div>
-              </div>
-              <button class="btn-primary">
-                Rencontrer l'équipe <i class="ti ti-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 9: Documents Téléchargeables -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-              padding-bottom: 80px;
-              border-bottom: 1px solid var(--gray-mid);
-            "
-          >
-            <div>
-              <div class="section-title" style="font-size: 36px">
-                Documents Téléchargeables
-              </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
-                Accédez à nos ressources documentaires : brochures, fiches techniques, guides, normes et documents de référence pour vos projets.
-              </p>
-              <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Brochures services
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Fiches techniques
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Guides et normes
-                </div>
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    font-size: 14px;
-                  "
-                >
-                  <i
-                    class="ti ti-check"
-                    style="color: var(--red); font-size: 18px"
-                  ></i>
-                  Modèles et templates
-                </div>
-              </div>
-              <button class="btn-primary">
-                Accéder aux documents <i class="ti ti-arrow-right"></i>
-              </button>
-            </div>
-            <div
-              style="
-                background: linear-gradient(135deg, #0a0a0a, #1a0000);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                overflow: hidden;
-              "
-            >
-              <div
-                style="
-                  position: absolute;
-                  inset: 0;
-                  background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80')
-                    center/cover;
-                  opacity: 0.25;
-                  mix-blend-mode: luminosity;
-                "
-              ></div>
-              <div
-                style="
-                  text-align: center;
-                  color: rgba(255, 255, 255, 0.3);
-                  position: relative;
-                  z-index: 1;
-                "
-              >
-                <i
-                  class="ti ti-file-download"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Documents</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 10: Filiales & Pays -->
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 80px;
-              align-items: center;
-              margin-bottom: 80px;
-            "
-          >
-            <div
-              style="
-                background: linear-gradient(135deg, #0d1117, #161b22);
-                border-radius: 20px;
-                height: 280px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                order: -1;
-              "
-            >
-              <div style="text-align: center; color: rgba(255, 255, 255, 0.3)">
-                <i
-                  class="ti ti-world"
-                  style="font-size: 64px; display: block; margin-bottom: 12px"
-                ></i>
-                <div style="font-size: 13px">Nos Filiales</div>
-              </div>
-            </div>
-            <div>
-              <div class="section-title" style="font-size: 36px">
-                Nos Filiales
-              </div>
-              <p
-                style="
-                  color: var(--gray);
-                  font-size: 15px;
-                  line-height: 1.8;
-                  margin: 16px 0 28px;
-                "
-              >
-                Découvrez notre présence à travers les pays africains. Chaque filiale offre des services adaptés aux réalités locales.
-              </p>
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: 1fr 1fr;
-                  gap: 12px;
-                  margin-bottom: 32px;
-                "
-              >
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Sénégal
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Côte d'Ivoire
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Mali
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Burkina Faso
-                </div>
-                <div
-                  style="
-                    padding: 14px;
-                    background: var(--gray-light);
-                    border-radius: 10px;
-                    font-size: 13px;
-                    font-weight: 500;
-                  "
-                >
-                  Comores
-                </div>
-              </div>
-              <button class="btn-primary">
-                Voir toutes les filiales <i class="ti ti-arrow-right"></i>
               </button>
             </div>
           </div>
@@ -2060,7 +989,7 @@
           <div class="slider-container">
             <!-- Slide 1 -->
             <div class="slide active">
-              <div class="slide-bg" style="background-image: url('Images/96081.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/aerial-view-cargo-ship-cargo-container-harbor.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>SENELEC — Certification ISO 50001</h1></div>
@@ -2073,7 +1002,7 @@
             </div>
             <!-- Slide 2 -->
             <div class="slide">
-              <div class="slide-bg" style="background-image: url('Images/Surmesure1.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/worker-using-automated-drone-system-inspect-integrity-offshore-platform-infrastructure.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Port Autonome de Dakar — ERP Industriel</h1></div>
@@ -2084,6 +1013,12 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- DOTS -->
+          <div class="slider-dots">
+            <div class="dot active" onclick="changePortfolioSlide(0)"></div>
+            <div class="dot" onclick="changePortfolioSlide(1)"></div>
           </div>
         </section>
         <section class="section" style="background: var(--gray-light)">
@@ -2167,7 +1102,7 @@
             >
               <div
                 class="card-image"
-                style="background: url('Images/96081.jpg') center/cover"
+                style="background: url('Images/excavator-action.jpg') center/cover"
               ></div>
               <div class="card-overlay">
                 <div class="card-content">
@@ -2191,7 +1126,7 @@
             >
               <div
                 class="card-image"
-                style="background: url('Images/economical-research.jpg') center/cover"
+                style="background: url('Images/sunset-sky-powers-wind-solar-energy-generated-by-ai.jpg') center/cover"
               ></div>
               <div class="card-overlay">
                 <div class="card-content">
@@ -2215,7 +1150,7 @@
             >
               <div
                 class="card-image"
-                style="background: url('Images/woman-debugging-optimizing-code-using-ai_482257-112287.jpg') center/cover"
+                style="background: url('Images/tech-support-oversees-ai-neural-network.jpg') center/cover"
               ></div>
               <div class="card-overlay">
                 <div class="card-content">
@@ -2239,7 +1174,7 @@
             >
               <div
                 class="card-image"
-                style="background: url('Images/96081 copy.jpg') center/cover"
+                style="background: url('Images/beautiful-silhouette-port-machinery-sunset.jpg') center/cover"
               ></div>
               <div class="card-overlay">
                 <div class="card-content">
@@ -2263,7 +1198,7 @@
             >
               <div
                 class="card-image"
-                style="background: url('Images/office-workers-using-finance-graphs.jpg') center/cover"
+                style="background: url('Images/business-person-using-laptop-multitasking-finish-daily-startup-tasks.jpg') center/cover"
               ></div>
               <div class="card-overlay">
                 <div class="card-content">
@@ -2287,7 +1222,7 @@
             >
               <div
                 class="card-image"
-                style="background: url('Images/soft-skills.jpeg') center/cover"
+                style="background: url('Images/view-male-engineer-work-engineers-day-celebration.jpg') center/cover"
               ></div>
               <div class="card-overlay">
                 <div class="card-content">
@@ -2346,7 +1281,7 @@
           <div class="slider-container">
             <!-- Slide 1 -->
             <div class="slide active">
-              <div class="slide-bg" style="background-image: url('Images/96081.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/male-working-with-welding-torch.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Santé Sécurité<br />Environnement</h1></div>
@@ -2359,7 +1294,7 @@
             </div>
             <!-- Slide 2 -->
             <div class="slide">
-              <div class="slide-bg" style="background-image: url('Images/Surmesure1.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/cutting-metal-with-plasma-equipment.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Certifications Internationales</h1></div>
@@ -2370,6 +1305,12 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- DOTS -->
+          <div class="slider-dots">
+            <div class="dot active" onclick="changeFormationSlide(0)"></div>
+            <div class="dot" onclick="changeFormationSlide(1)"></div>
           </div>
         </section>
         <section class="section">
@@ -2460,10 +1401,10 @@
                   <i class="ti ti-users"></i> Max 10 participants
                 </div>
                 <div class="formation-detail">
-                  <i class="ti ti-map-pin"></i> Dakar — Centre IAS
+                  <i class="ti ti-map-pin"></i> Dakar — Centre IRG
                 </div>
                 <div class="formation-detail">
-                  <i class="ti ti-certificate"></i> Certification IAS Register
+                  <i class="ti ti-certificate"></i> Certification IRG Register
                 </div>
                 <div class="formation-badges">
                   <span class="badge badge-red">Industrie 4.0</span>
@@ -2533,7 +1474,7 @@
                   <i class="ti ti-users"></i> Max 10 participants
                 </div>
                 <div class="formation-detail">
-                  <i class="ti ti-map-pin"></i> Dakar — Centre IAS
+                  <i class="ti ti-map-pin"></i> Dakar — Centre IRG
                 </div>
                 <div class="formation-detail">
                   <i class="ti ti-certificate"></i> Certification CQI IRCA
@@ -2573,7 +1514,7 @@
                   <i class="ti ti-map-pin"></i> Sur site ou Dakar
                 </div>
                 <div class="formation-detail">
-                  <i class="ti ti-certificate"></i> Attestation IAS Register
+                  <i class="ti ti-certificate"></i> Attestation IRG Register
                 </div>
                 <div class="formation-badges">
                   <span class="badge badge-red">GMAO</span>
@@ -2612,7 +1553,7 @@
           <div class="slider-container">
             <!-- Slide 1 -->
             <div class="slide active">
-              <div class="slide-bg" style="background-image: url('Images/96081.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/african-american-worker-standing-uniform-wearing-safety-hat-factory.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Construisez l'Afrique avec nous</h1></div>
@@ -2625,7 +1566,7 @@
             </div>
             <!-- Slide 2 -->
             <div class="slide">
-              <div class="slide-bg" style="background-image: url('Images/Surmesure1.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/african-american-technician-checks-maintenance-solar-panels-group-three-black-engineers-meeting-solar-station.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>+40 Experts Certifiés</h1></div>
@@ -2636,6 +1577,12 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- DOTS -->
+          <div class="slider-dots">
+            <div class="dot active" onclick="changeRecrutementSlide(0)"></div>
+            <div class="dot" onclick="changeRecrutementSlide(1)"></div>
           </div>
         </section>
         <section class="offres-section">
@@ -2932,7 +1879,7 @@
                   <input type="checkbox" id="consent" required />
                   <label for="consent">
                     J'accepte que mes données personnelles soient conservées par
-                    IAS Register Africa dans le cadre du processus de
+                    IRG Register Africa dans le cadre du processus de
                     recrutement, conformément à notre politique de
                     confidentialité.
                   </label>
@@ -2954,8 +1901,8 @@
           <div class="arrow arrow-right" onclick="changeBlogSlide(1)">&#10095;</div>
           <div class="slider-container">
             <!-- Slide 1 -->
-            <div class="slide active">
-              <div class="slide-bg" style="background-image: url('Images/96081.jpg')"></div>
+            <div class="slide active" style="margin-top: 40px;">
+              <div class="slide-bg" style="background-image: url('Images/african-american-technician-check-maintenance-solar-panels-black-woman-engineer-solar-station.jpg')"></div>
               <div class="hero-content">
 
                 <div class="red-box"><h1>Analyses Sectorielles</h1></div>
@@ -2968,10 +1915,10 @@
             </div>
             <!-- Slide 2 -->
             <div class="slide">
-              <div class="slide-bg" style="background-image: url('Images/Surmesure1.jpg')"></div>
+              <div class="slide-bg" style="background-image: url('Images/sunset-sky-powers-wind-solar-energy-generated-by-ai.jpg')"></div>
               <div class="hero-content">
 
-                <div class="red-box"><h1>Le Blog IAS Register Africa</h1></div>
+                <div class="red-box"><h1>Le Blog IRG Register Africa</h1></div>
                 <p>Dernières actualités, innovations et tendances du secteur de la certification en Afrique subsaharienne.</p>
                 <div class="hero-buttons">
                   <a href="#" class="btn-slider btn-red">Derniers articles</a>
@@ -2980,6 +1927,12 @@
               </div>
             </div>
           </div>
+
+          <!-- DOTS -->
+          <div class="slider-dots">
+            <div class="dot active" onclick="changeBlogSlide(0)"></div>
+            <div class="dot" onclick="changeBlogSlide(1)"></div>
+          </div>
         </section>
         <section class="section">
           <div class="blog-grid">
@@ -2987,9 +1940,9 @@
               <div class="article-card-big">
                 <div
                   class="article-img-big"
-                  style="background: linear-gradient(135deg, #0a0a0a, #1a0000)"
+                  style="background: url('Images/portrait-engineers-work-hours-job-site.jpg') center/cover"
                 >
-                  <div class="article-img-big-ov"></div>
+                  <div class="article-img-big-ov" style="margin-top: 40px;"></div>
                 </div>
                 <div class="article-body-big">
 
@@ -3008,6 +1961,9 @@
                     <span><i class="ti ti-clock"></i> 7 min de lecture</span>
                     <span><i class="ti ti-user"></i> Fatou Ndiaye</span>
                   </div>
+                  <button class="btn-primary" style="margin-top: 16px;">
+                    Lire l'article <i class="ti ti-arrow-right"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -3015,7 +1971,7 @@
               <div class="article-card-small">
                 <div
                   class="article-img-small"
-                  style="background: linear-gradient(135deg, #001a0a, #003d15)"
+                  style="background: url('Images/sunset-sky-powers-wind-solar-energy-generated-by-ai.jpg') center/cover"
                 ></div>
                 <div>
                   <div class="article-title-small">
@@ -3024,12 +1980,15 @@
                   <div class="article-date-small">
                     <i class="ti ti-calendar"></i> 2 mai 2025
                   </div>
+                  <button class="btn-primary" style="margin-top: 12px; padding: 8px 16px; font-size: 12px;">
+                    Lire l'article <i class="ti ti-arrow-right"></i>
+                  </button>
                 </div>
               </div>
               <div class="article-card-small">
                 <div
                   class="article-img-small"
-                  style="background: linear-gradient(135deg, #0a001a, #15003d)"
+                  style="background: url('Images/tech-support-oversees-ai-neural-network.jpg') center/cover"
                 ></div>
                 <div>
                   <div class="article-title-small">
@@ -3038,12 +1997,15 @@
                   <div class="article-date-small">
                     <i class="ti ti-calendar"></i> 28 avr. 2025
                   </div>
+                  <button class="btn-primary" style="margin-top: 12px; padding: 8px 16px; font-size: 12px;">
+                    Lire l'article <i class="ti ti-arrow-right"></i>
+                  </button>
                 </div>
               </div>
               <div class="article-card-small">
                 <div
                   class="article-img-small"
-                  style="background: linear-gradient(135deg, #1a1000, #3d2800)"
+                  style="background: url('Images/beautiful-silhouette-port-machinery-sunset.jpg') center/cover"
                 ></div>
                 <div>
                   <div class="article-title-small">
@@ -3053,12 +2015,15 @@
                   <div class="article-date-small">
                     <i class="ti ti-calendar"></i> 20 avr. 2025
                   </div>
+                  <button class="btn-primary" style="margin-top: 12px; padding: 8px 16px; font-size: 12px;">
+                    Lire l'article <i class="ti ti-arrow-right"></i>
+                  </button>
                 </div>
               </div>
               <div class="article-card-small">
                 <div
                   class="article-img-small"
-                  style="background: linear-gradient(135deg, #001a1a, #003d3d)"
+                  style="background: url('Images/business-person-using-laptop-multitasking-finish-daily-startup-tasks.jpg') center/cover"
                 ></div>
                 <div>
                   <div class="article-title-small">
@@ -3067,6 +2032,9 @@
                   <div class="article-date-small">
                     <i class="ti ti-calendar"></i> 15 avr. 2025
                   </div>
+                  <button class="btn-primary" style="margin-top: 12px; padding: 8px 16px; font-size: 12px;">
+                    Lire l'article <i class="ti ti-arrow-right"></i>
+                  </button>
                 </div>
               </div>
               <div
@@ -3085,7 +2053,7 @@
                     margin-bottom: 8px;
                   "
                 >
-                  Newsletter IAS
+                  Newsletter IRG
                 </div>
                 <div style="font-size: 13px; opacity: 0.8; margin-bottom: 16px">
                   Recevez nos insights exclusifs chaque mois.
@@ -3198,7 +2166,7 @@
                 </div>
 
                 <div class="side-description">
-                  Contactez IAS Register Africa pour vos besoins en certification,
+                  Contactez IRG Register Africa pour vos besoins en certification,
                   audit, formation et transformation organisationnelle.
                 </div>
 
@@ -3276,11 +2244,8 @@
         <div class="footer-grid">
           <div>
             <div class="nav-logo" style="margin-bottom: 16px">
-              <div class="nav-logo-mark">IAS</div>
+              <img src="Images/IRG Logo Blanc-01-01.png" alt="IRG Logo" style="height: 40px;" />
               <div>
-                <div class="nav-name" style="color: #fff">
-                  IAS Register Africa
-                </div>
                 <div class="nav-sub" style="color: rgba(255, 255, 255, 0.4)">
                   Filiale Sénégalaise
                 </div>
@@ -3324,7 +2289,7 @@
         </div>
         <div class="footer-bottom">
           <div class="footer-copy">
-            © 2025 IAS Register Africa — Filiale Sénégalaise. Tous droits
+            © 2025 IRG Register Africa — Filiale Sénégalaise. Tous droits
             réservés.
           </div>
           <div class="footer-socials">
@@ -3679,17 +2644,43 @@
       const dots = document.querySelectorAll(".dot");
       const totalSlides = slides.length;
 
+      // Preload all slide images
+      slides.forEach((slide) => {
+        const bg = slide.querySelector(".slide-bg");
+        if (bg) {
+          const imageUrl = bg.style.backgroundImage;
+          if (imageUrl) {
+            const url = imageUrl.match(/url\(['"]?([^'"]+)['"]?\)/);
+            if (url && url[1]) {
+              const img = new Image();
+              img.src = url[1];
+            }
+          }
+        }
+      });
+
       function showSlide(index) {
-        // Hide all slides
         slides.forEach((slide) => slide.classList.remove("active"));
         dots.forEach((dot) => dot.classList.remove("active"));
 
-        // Show current slide
         slides[index].classList.add("active");
         dots[index].classList.add("active");
       }
 
+      function prevSlide() {
+        changeSlide(-1);
+      }
+
+      function nextSlide() {
+        changeSlide(1);
+      }
+
       function changeSlide(direction) {
+        // Remove active from all slides first
+        slides.forEach((slide) => slide.classList.remove("active"));
+        dots.forEach((dot) => dot.classList.remove("active"));
+
+        // Calculate new index
         currentSlide += direction;
 
         if (currentSlide >= totalSlides) {
@@ -3698,7 +2689,9 @@
           currentSlide = totalSlides - 1;
         }
 
-        showSlide(currentSlide);
+        // Add active to new slide
+        slides[currentSlide].classList.add("active");
+        dots[currentSlide].classList.add("active");
       }
 
       function goToSlide(index) {
@@ -3709,7 +2702,7 @@
       // Auto-play slider
       setInterval(() => {
         changeSlide(1);
-      }, 5000);
+      }, 3000);
 
       // Initialize first slide
       showSlide(0);
@@ -3796,6 +2789,7 @@
       function showBlogSlide(index) {
         blogSlides.forEach((slide) => slide.classList.remove("active"));
         blogDots.forEach((dot) => dot.classList.remove("active"));
+
         blogSlides[index].classList.add("active");
         blogDots[index].classList.add("active");
       }
@@ -3838,6 +2832,7 @@
       function showRecrutementSlide(index) {
         recrutementSlides.forEach((slide) => slide.classList.remove("active"));
         recrutementDots.forEach((dot) => dot.classList.remove("active"));
+
         recrutementSlides[index].classList.add("active");
         recrutementDots[index].classList.add("active");
       }
@@ -3878,6 +2873,7 @@
       function showFormationSlide(index) {
         formationSlides.forEach((slide) => slide.classList.remove("active"));
         formationDots.forEach((dot) => dot.classList.remove("active"));
+
         formationSlides[index].classList.add("active");
         formationDots[index].classList.add("active");
       }
@@ -3920,6 +2916,7 @@
       function showPortfolioSlide(index) {
         portfolioSlides.forEach((slide) => slide.classList.remove("active"));
         portfolioDots.forEach((dot) => dot.classList.remove("active"));
+
         portfolioSlides[index].classList.add("active");
         portfolioDots[index].classList.add("active");
       }
@@ -3958,6 +2955,7 @@
       function showServicesSlide(index) {
         servicesSlides.forEach((slide) => slide.classList.remove("active"));
         servicesDots.forEach((dot) => dot.classList.remove("active"));
+
         servicesSlides[index].classList.add("active");
         servicesDots[index].classList.add("active");
       }
@@ -3996,8 +2994,9 @@
       function showAboutSlide(index) {
         aboutSlides.forEach((slide) => slide.classList.remove("active"));
         aboutDots.forEach((dot) => dot.classList.remove("active"));
-        aboutSlides[index].classList.add("active");
-        aboutDots[index].classList.add("active");
+
+        if (aboutSlides[index]) aboutSlides[index].classList.add("active");
+        if (aboutDots[index]) aboutDots[index].classList.add("active");
       }
 
       function changeAboutSlide(direction) {
@@ -4034,6 +3033,7 @@
       function showContactSlide(index) {
         contactSlides.forEach((slide) => slide.classList.remove("active"));
         contactDots.forEach((dot) => dot.classList.remove("active"));
+
         if (contactSlides[index]) contactSlides[index].classList.add("active");
         if (contactDots[index]) contactDots[index].classList.add("active");
       }
@@ -4077,7 +3077,7 @@
         const teamData = [
           {
             name: "Ousmane Konaté",
-            desc: "Fondateur et Directeur Général avec plus de 15 ans d'expérience dans l'inspection industrielle. Ancien cadre chez Bureau Veritas, il pilote la vision stratégique d'IAS Register en Afrique.",
+            desc: "Fondateur et Directeur Général avec plus de 15 ans d'expérience dans l'inspection industrielle. Ancien cadre chez Bureau Veritas, il pilote la vision stratégique d'IRG Register en Afrique.",
           },
           {
             name: "Fatou Ndiaye",
