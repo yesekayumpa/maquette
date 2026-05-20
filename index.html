@@ -2632,8 +2632,12 @@
         document
           .querySelectorAll(".page-tab")
           .forEach((t) => t.classList.remove("active"));
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((a) => a.classList.remove("active"));
         var el = document.getElementById("page-" + id);
         if (el) el.classList.add("active");
+        if (tab) tab.classList.add("active");
         if (tab) tab.classList.add("active");
         window.scrollTo(0, 0);
       }

@@ -112,6 +112,12 @@ body {
 .nav-links a:hover::after {
   width: 100%;
 }
+.nav-links a.active {
+  color: var(--red);
+}
+.nav-links a.active::after {
+  width: 100%;
+}
 .nav-cta {
   background: var(--red);
   color: #fff;
