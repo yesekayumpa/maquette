@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -388,7 +389,6 @@ body {
   letter-spacing: 0.5px;
   border: none;
   cursor: pointer;
-  display: inline-flex;
   align-items: center;
   gap: 8px;
 }
@@ -2290,22 +2290,21 @@ body {
       margin-bottom: 40px;
     }
  
-    .btn-primary {
-      font-family: "Geist", serif;
-  font-weight: 800;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      padding: 13px 26px;
-      background: #e04040;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.18s, transform 0.1s;
-    }
+.btn-primary {
+  font-family: "Geist", serif;
+  font-size: 13px;
+  font-weight: 700;  /* supprimez la ligne en double (font-weight: 800 plus haut) */
+  letter-spacing: 0.02em;
+  padding: 13px 26px;
+  background: #e04040;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;  /* ← au lieu de flex */
+  align-items: center;
+  gap: 8px;
+  transition: background 0.18s, transform 0.1s;
+}
  
     .btn-primary:hover { background: #c73030; }
     .btn-primary:active { transform: scale(0.97); }
@@ -2584,7 +2583,7 @@ body {
   align-items: center;
   gap: 50px;
   padding: 50px 60px;
-  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 100%), 
+  background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%), 
             url('Images/aerial-view-cargo-ship-cargo-container-harbor.jpg') center/cover no-repeat;
   color: #fff;
 }
@@ -2994,13 +2993,13 @@ body {
 .contact-form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 20px;
 }
 
 .field-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .field-group.full {
@@ -3036,9 +3035,25 @@ body {
   font-size: 15px;
   color: #1E1E1E;
   transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-  box-sizing: border-box;
   font-family: "Geist", sans-serif;
+}
+
+.lux-input:focus,
+.lux-select:focus,
+.lux-textarea:focus {
+  outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 0 4px rgba(229, 40, 34, 0.1);
+}
+
+.lux-input::placeholder,
+.lux-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.lux-textarea {
+  min-height: 140px;
+  resize: vertical;
 }
 
 .lux-input:hover,
@@ -3051,18 +3066,13 @@ body {
 .lux-input:focus,
 .lux-select:focus,
 .lux-textarea:focus {
+  outline: none;
   border-color: var(--red);
   background: #ffffff;
   box-shadow:
     0 0 0 4px rgba(229, 40, 34, 0.1),
     0 4px 12px rgba(229, 40, 34, 0.15);
   transform: translateY(-1px);
-}
-
-.lux-input::placeholder,
-.lux-textarea::placeholder {
-  color: #9ca3af;
-  font-weight: 400;
 }
 
 .lux-textarea {
@@ -4085,7 +4095,7 @@ body {
 
 
 .section-title {
-  font-family: "Geist", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 40px;
   line-height: 1.1;
@@ -4093,3 +4103,117 @@ body {
   letter-spacing: -1px;
   margin-bottom: 16px;
 }
+
+/* CONTENU LOCAL PAGE STYLES */
+.contenu-intro {
+  padding: 80px 100px;
+  background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+}
+
+.contenu-intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contenu-intro-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--gray);
+  margin: 30px 0;
+  font-weight: 400;
+}
+
+.contenu-intro-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.intro-stat {
+  text-align: center;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.intro-stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(229, 40, 34, 0.15);
+}
+
+.intro-stat-num {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.intro-stat-label {
+  font-size: 14px;
+  color: var(--gray);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.impact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid var(--gray-mid);
+  transition: all 0.3s;
+}
+
+.impact-card:hover {
+  border-color: var(--red);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(229, 40, 34, 0.12);
+}
+
+.impact-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(229, 40, 34, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  font-size: 24px;
+  margin: 0 auto 20px;
+}
+
+.impact-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.impact-desc {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.contenu-services-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+

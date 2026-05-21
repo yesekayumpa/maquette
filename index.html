@@ -28,14 +28,14 @@
         <div class="nav-links">
           <a href="#" onclick="showPage('accueil', this)">Accueil</a>
           <a href="#" onclick="showPage('about', this)">À propos</a>
-          <a href="#" onclick="showPage('services', this)">Services</a>
+          <a href="#" onclick="showPage('services', this)">Activités</a>
           <a href="#" onclick="showPage('realisations', this)">Réalisations</a>
           <a href="#" onclick="showPage('formation', this)">Formation</a>
+          <a href="#" onclick="showPage('contenu-local', this)">Contenu Local</a>
           <a href="#" onclick="showPage('recrutement', this)">Recrutement</a>
           <a href="#" onclick="showPage('blog', this)">Blog</a>
-          <a href="#" onclick="showPage('contact', this)">Contact</a>
         </div>
-        <button class="nav-cta">Nous contacter</button>
+        <button class="nav-cta" onclick="showPage('contact', this)">Nous contacter</button>
       </nav>
 
 
@@ -467,44 +467,35 @@
         </section>
 
         <!-- CTA FINAL -->
-        <section class="cta-section-enhanced">
-          <div class="cta-content">
+<section class="cta-section-enhanced" style="position: relative; overflow: hidden;">
+  <!-- Image de fond SANS filter -->
+  <div class="slide-bg" style="background-image: url('Images/economical-research.jpg'); height: 100%; background-position: center; background-size: cover; position: absolute; inset: 0;"></div>
+  
+  <div class="cta-content" style="position: relative; z-index: 2; padding: 4rem 2rem;">
+    <div class="section-title" style="color: white;">Prêt à élever vos standards ?</div>
+    <p class="cta-description" style="color: white;">
+      Contactez nos experts pour un audit gratuit et découvrez comment
+      IRG Register Africa peut transformer votre organisation.
+    </p>
+    <div class="cta-buttons">
+      <button class="btn-primary" style="background: #0055a5; color: white; border: none; padding: 12px 20px; border-radius: 8px;">
+        Demander un audit gratuit
+        <i class="ti ti-arrow-right"></i>
+      </button>
+      <button class="btn-outline-light" style="background: transparent; color: white; border: 1px solid white; padding: 12px 20px; border-radius: 8px;">
+        <i class="ti ti-phone-call"></i> +221 33 xxx xxxx
+      </button>
+    </div>
 
-          <div class="section-title">Prêt à élever vos standards ?</div>
-            <p class="cta-description">
-              Contactez nos experts pour un audit gratuit et découvrez comment
-              IRG Register Africa peut transformer votre organisation.
-            </p>
-            <div class="cta-buttons">
-              <button class="btn-primary">
-                Demander un audit gratuit
-                <i class="ti ti-arrow-right"></i>
-              </button>
-              <button class="btn-outline-light">
-                <i class="ti ti-phone-call"></i> +221 33 xxx xxxx
-              </button>
-            </div>
-            <div class="cta-icons">
-              <div class="cta-icon-item">
-                <i class="ti ti-shield-check"></i> Accréditation internationale
-              </div>
-              <div class="cta-icon-item">
-                <i class="ti ti-clock"></i> Réponse en 24h
-              </div>
-              <div class="cta-icon-item">
-                <i class="ti ti-certificate"></i> Certifications ISO reconnues
-              </div>
-            </div>
-          </div>
+  </div>
 
-          <div class="cta-visual">
-            <div class="visual-card">
-              <i class="ti ti-building-factory-2"></i>
-              <span>Excellence industrielle africaine</span>
-            </div>
-            <div class="visual-badge">+150 clients satisfaits</div>
-          </div>
-        </section>
+  <div class="cta-visual" style="position: relative; z-index: 2; padding: 4rem 2rem;">
+    <div class="visual-card" style="background: rgba(255,255,255,0.15); padding: 1rem; border-radius: 12px; color: white;">
+      <i class="ti ti-building-factory-2"></i>
+      <span>Excellence industrielle africaine</span>
+    </div>
+  </div>
+</section>
       </div>
       <!-- /ACCUEIL -->
 
@@ -1581,6 +1572,297 @@
         </section>
       </div>
 
+      <!-- ============ CONTENU LOCAL ============ -->
+      <div id="page-contenu-local" class="page-section">
+        <!-- HERO SECTION -->
+        <section class="hero-slider">
+          <div class="arrow arrow-left" onclick="changeContenuLocalSlide(-1)">&#10094;</div>
+          <div class="arrow arrow-right" onclick="changeContenuLocalSlide(1)">&#10095;</div>
+          <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide active">
+              <div class="slide-bg" style="background-image: url('Images/business-person-using-laptop-multitasking-finish-daily-startup-tasks.jpg')"></div>
+              <div class="hero-content">
+                <div class="red-box"><h1>Contenu Local<br/>Excellence Africaine</h1></div>
+                <p>Développons ensemble des solutions adaptées au contexte africain pour une transformation industrielle durable et inclusive.</p>
+                <div class="hero-buttons">
+                  <a href="#" class="btn-slider btn-red">Nos Engagements</a>
+                  <a href="#" class="btn-slider btn-outline">En Savoir Plus</a>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="slide-bg" style="background-image: url('Images/view-male-engineer-work-engineers-day-celebration.jpg')"></div>
+              <div class="hero-content">
+                <div class="red-box"><h1>Formation &<br/>Compétences Locales</h1></div>
+                <p>Investissons dans les talents africains pour construire l'industrie de demain avec des experts formés localement.</p>
+                <div class="hero-buttons">
+                  <a href="#" class="btn-slider btn-red">Nos Programmes</a>
+                  <a href="#" class="btn-slider btn-outline">Contactez-nous</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- DOTS -->
+          <div class="slider-dots">
+            <div class="dot active" onclick="goToContenuLocalSlide(0)"></div>
+            <div class="dot" onclick="goToContenuLocalSlide(1)"></div>
+          </div>
+        </section>
+
+        <!-- INTRODUCTION SECTION -->
+        <section class="section contenu-intro">
+          <div class="contenu-intro-content">
+            <div class="section-title">Notre approche du contenu local</div>
+            <p class="contenu-intro-text">
+              Chez IRG Register Africa, nous croyons que l'excellence industrielle en Afrique doit être construite sur des fondations locales. Notre approche combine expertise internationale et compréhension profonde des réalités africaines pour offrir des solutions véritablement adaptées.
+            </p>
+            <div class="contenu-intro-stats">
+              <div class="intro-stat">
+                <div class="intro-stat-num">100%</div>
+                <div class="intro-stat-label">Contenu local</div>
+              </div>
+              <div class="intro-stat">
+                <div class="intro-stat-num">50+</div>
+                <div class="intro-stat-label">Experts africains</div>
+              </div>
+              <div class="intro-stat">
+                <div class="intro-stat-num">8</div>
+                <div class="intro-stat-label">Pays couverts</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2 : EN QUOI VOUS ÊTES DIFFÉRENT -->
+        <section class="section" style="background: var(--gray-light)">
+          <div class="section-header">
+            <div>
+              <div class="section-tag">Nos différenciateurs</div>
+              <div class="section-title">En quoi vous êtes différent</div>
+              <div class="section-sub">
+                Quatre piliers fondamentaux qui distinguent notre approche et garantissent des résultats exceptionnels pour nos partenaires africains.
+              </div>
+            </div>
+          </div>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon"><i class="ti ti-shield-check"></i></div>
+              <div class="value-title">Ethique</div>
+              <div class="value-desc">
+                Transparence absolue et intégrité dans chaque engagement envers nos clients et partenaires africains.
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="ti ti-star"></i></div>
+              <div class="value-title">Excellence Opérationnelle</div>
+              <div class="value-desc">
+                Standards de qualité internationale appliqués avec rigueur à chaque projet, sans compromis sur les résultats.
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="ti ti-world"></i></div>
+              <div class="value-title">Contenu Local</div>
+              <div class="value-desc">
+                Solutions adaptées au contexte africain, développées par des experts qui comprennent les réalités locales.
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="ti ti-leaf"></i></div>
+              <div class="value-title">RSE</div>
+              <div class="value-desc">
+                Engagement fort pour la responsabilité sociétale des entreprises et le développement durable en Afrique.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3 : MESSAGE CLÉ DU SITE -->
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-tag">Nos piliers d'excellence</div>
+              <div class="section-title">Message clé du site</div>
+              <div class="section-sub">
+                Quatre domaines d'expertise qui définissent notre mission de transformation industrielle en Afrique.
+              </div>
+            </div>
+          </div>
+          <div class="services-grid contenu-services-grid">
+            <div class="service-card">
+              <div class="service-img">
+                <div
+                  class="service-img-inner"
+                  style="
+                    background:
+                      linear-gradient(135deg, #1a1a2e, #16213e),
+                      url(&quot;Images/graduation-cap-diploma-education.jpg&quot;)
+                        center/cover;
+                    background-blend-mode: multiply;
+                  "
+                ></div>
+                <div class="service-img-overlay"></div>
+              </div>
+              <div class="service-body">
+                <div class="service-num">01 — FORMATION</div>
+                <div class="service-name">Formation Professionnelle</div>
+                <div class="service-desc">
+                  Programmes de formation adaptés aux métiers techniques en Afrique : Mines, BTP, Industrie et Digital.
+                </div>
+                <a class="service-link"
+                  >En savoir plus <i class="ti ti-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-img">
+                <div
+                  class="service-img-inner"
+                  style="
+                    background:
+                      linear-gradient(135deg, #0d1117, #161b22),
+                      url(&quot;Images/african-business-team-meeting-office.jpg&quot;)
+                        center/cover;
+                    background-blend-mode: multiply;
+                  "
+                ></div>
+                <div class="service-img-overlay"></div>
+              </div>
+              <div class="service-body">
+                <div class="service-num">02 — CONTENU LOCAL</div>
+                <div class="service-name">Contenu Local</div>
+                <div class="service-desc">
+                  Solutions et contenus développés localement par des experts africains pour une pertinence maximale.
+                </div>
+                <a class="service-link"
+                  >En savoir plus <i class="ti ti-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-img">
+                <div
+                  class="service-img-inner"
+                  style="
+                    background:
+                      linear-gradient(135deg, #2d1b1b, #4a1515),
+                      url(&quot;Images/sustainable-development-green-energy.jpg&quot;)
+                        center/cover;
+                    background-blend-mode: multiply;
+                  "
+                ></div>
+                <div class="service-img-overlay"></div>
+              </div>
+              <div class="service-body">
+                <div class="service-num">03 — RSE</div>
+                <div class="service-name">RSE</div>
+                <div class="service-desc">
+                  Responsabilité Sociétale des Entreprises : engagement pour un développement durable et inclusif.
+                </div>
+                <a class="service-link"
+                  >En savoir plus <i class="ti ti-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-img">
+                <div
+                  class="service-img-inner"
+                  style="
+                    background:
+                      linear-gradient(135deg, #1a2e1a, #16213e),
+                      url(&quot;Images/digital-transformation-technology.jpg&quot;)
+                        center/cover;
+                    background-blend-mode: multiply;
+                  "
+                ></div>
+                <div class="service-img-overlay"></div>
+              </div>
+              <div class="service-body">
+                <div class="service-num">04 — DIGITALISATION</div>
+                <div class="service-name">Digitalisation</div>
+                <div class="service-desc">
+                  Transformation digitale des processus industriels avec des solutions IoT, ERP et intelligence artificielle.
+                </div>
+                <a class="service-link"
+                  >En savoir plus <i class="ti ti-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- IMPACT SECTION -->
+        <section class="section" style="background: var(--gray-light)">
+          <div class="section-header">
+            <div>
+              <div class="section-tag">Notre impact</div>
+              <div class="section-title">Résultats concrets en Afrique</div>
+            </div>
+          </div>
+          <div class="impact-grid">
+            <div class="impact-card">
+              <div class="impact-icon"><i class="ti ti-graduation-cap"></i></div>
+              <div class="impact-title">+5000</div>
+              <div class="impact-desc">Professionnels formés localement</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-icon"><i class="ti ti-building-factory-2"></i></div>
+              <div class="impact-title">+150</div>
+              <div class="impact-desc">Entreprises accompagnées</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-icon"><i class="ti ti-certificate"></i></div>
+              <div class="impact-title">98%</div>
+              <div class="impact-desc">Taux de réussite certification</div>
+            </div>
+            <div class="impact-card">
+              <div class="impact-icon"><i class="ti ti-leaf"></i></div>
+              <div class="impact-title">100%</div>
+              <div class="impact-desc">Engagement RSE respecté</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section-enhanced">
+          <div class="cta-content">
+            <div class="section-title">Rejoignez notre démarche d'excellence locale</div>
+            <p class="cta-description">
+              Découvrez comment notre approche du contenu local et de la RSE peut transformer votre organisation en Afrique.
+            </p>
+            <div class="cta-buttons">
+              <button class="btn-primary">
+                Nous contacter
+                <i class="ti ti-arrow-right"></i>
+              </button>
+              <button class="btn-outline-light">
+                <i class="ti ti-phone-call"></i> +221 33 xxx xxxx
+              </button>
+            </div>
+            <div class="cta-icons">
+              <div class="cta-icon-item">
+                <i class="ti ti-graduation-cap"></i> Formation locale
+              </div>
+              <div class="cta-icon-item">
+                <i class="ti ti-leaf"></i> RSE engagée
+              </div>
+              <div class="cta-icon-item">
+                <i class="ti ti-device-desktop"></i> Digitalisation
+              </div>
+            </div>
+          </div>
+          <div class="cta-visual">
+            <div class="visual-card">
+              <i class="ti ti-world-africa"></i>
+              <span>Excellence africaine</span>
+            </div>
+            <div class="visual-badge">Contenu 100% local</div>
+          </div>
+        </section>
+      </div>
+
       <!-- ============ RECRUTEMENT ============ -->
       <div id="page-recrutement" class="page-section">
         <section class="hero-slider">
@@ -2129,7 +2411,7 @@
 
       <div id="page-contact" class="page-section">
         <section class="static-hero" style="position: relative; height: 350px; overflow: hidden;">
-          <div class="slide-bg" style="background-image: url('Images/economical-research.jpg'); height: 100%; background-position: center; background-size: cover; filter: brightness(0.4);"></div>
+          <div class="slide-bg" style="background-image: url('Images/portrait-engineers-work-hours-job-site.jpg'); height: 100%; background-position: center; background-size: cover; filter: brightness(0.7);"></div>
           <div class="hero-content" style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 7%;">
 
             <div class="red-box"><h1 style="font-size: 42px;">Parlons de Votre Prochain Projet</h1></div>
@@ -2161,14 +2443,31 @@
                   <input type="text" class="lux-input" placeholder="Votre nom">
                 </div>
 
-                <div class="field-group full">
+                <div class="field-group">
+                  <label>Email professionnel</label>
+                  <input type="email" class="lux-input" placeholder="contact@entreprise.com">
+                </div>
+
+                <div class="field-group">
                   <label>Entreprise</label>
                   <input type="text" class="lux-input" placeholder="Nom de votre entreprise">
                 </div>
 
                 <div class="field-group">
-                  <label>Email professionnel</label>
-                  <input type="email" class="lux-input" placeholder="contact@entreprise.com">
+                  <label>Téléphone</label>
+                  <input type="tel" class="lux-input" placeholder="+221 33 xxx xxxx">
+                </div>
+
+                <div class="field-group full">
+                  <label>Objet</label>
+                  <select class="lux-input">
+                    <option value="">Sélectionnez un sujet</option>
+                    <option value="certification">Certification ISO</option>
+                    <option value="audit">Audit & Inspection</option>
+                    <option value="formation">Formation</option>
+                    <option value="digital">Transformation Digitale</option>
+                    <option value="autre">Autre demande</option>
+                  </select>
                 </div>
 
                 <div class="field-group full">
@@ -3104,6 +3403,49 @@
 
       // Initialize first slide
       showContactSlide(0);
+    </script>
+
+    <script>
+      // Slider Contenu Local - fonctions séparées
+      let currentContenuLocalSlide = 0;
+      const contenuLocalSlides = document.querySelectorAll("#page-contenu-local .slide");
+      const contenuLocalDots = document.querySelectorAll("#page-contenu-local .dot");
+      const totalContenuLocalSlides = contenuLocalSlides.length;
+
+      function showContenuLocalSlide(index) {
+        contenuLocalSlides.forEach((slide) => slide.classList.remove("active"));
+        contenuLocalDots.forEach((dot) => dot.classList.remove("active"));
+
+        if (contenuLocalSlides[index]) contenuLocalSlides[index].classList.add("active");
+        if (contenuLocalDots[index]) contenuLocalDots[index].classList.add("active");
+      }
+
+      function changeContenuLocalSlide(direction) {
+        currentContenuLocalSlide += direction;
+        if (currentContenuLocalSlide >= totalContenuLocalSlides) {
+          currentContenuLocalSlide = 0;
+        } else if (currentContenuLocalSlide < 0) {
+          currentContenuLocalSlide = totalContenuLocalSlides - 1;
+        }
+        showContenuLocalSlide(currentContenuLocalSlide);
+      }
+
+      function goToContenuLocalSlide(index) {
+        currentContenuLocalSlide = index;
+        showContenuLocalSlide(currentContenuLocalSlide);
+      }
+
+      // Auto-play slider contenu local
+      setInterval(() => {
+        if (
+          document.getElementById("page-contenu-local").classList.contains("active")
+        ) {
+          changeContenuLocalSlide(1);
+        }
+      }, 5000);
+
+      // Initialize first slide
+      showContenuLocalSlide(0);
     </script>
     <script>
       (function () {
